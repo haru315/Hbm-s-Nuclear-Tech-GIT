@@ -2,6 +2,7 @@ package com.hbm.entity.logic;
 
 import java.util.List;
 
+import com.hbm.explosion.ExplosionNukeGridBase;
 import com.hbm.interfaces.IExplosionRay;
 import org.apache.logging.log4j.Level;
 
@@ -72,7 +73,8 @@ public class EntityNukeExplosionMK5 extends EntityExplosionChunkloading {
 			//if(BombConfig.explosionAlgorithm == 1 || BombConfig.explosionAlgorithm == 2) {
 			//	explosion = new ExplosionNukeRayParallelized(worldObj, posX, posY, posZ, strength, speed, length);
 			//} else {
-				explosion = new ExplosionNukeRayBatched(worldObj, (int) posX, (int) posY, (int) posZ, strength, speed, length);
+//				explosion = new ExplosionNukeRayBatched(worldObj, (int) posX, (int) posY, (int) posZ, strength, speed, length);
+				explosion = new ExplosionNukeGridBase(worldObj, (int) posX, (int) posY, (int) posZ, strength, speed, length);
 			//}
 		}
 
